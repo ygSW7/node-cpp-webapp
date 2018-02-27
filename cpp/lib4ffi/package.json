@@ -1,0 +1,7 @@
+{
+  "name": "lib4ffi",
+  "version": "0.0.1",
+  "private": true,
+  "gypfile": true,
+  "install": "node-gyp configure build"
+}
