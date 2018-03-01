@@ -16,9 +16,14 @@ router.post('/', function(req, res) {
     var program = "../cpp/standalone_flex_file/build/Release/standalone_flex_file";
     var under = parseInt(req.body.under);
 
-    temp.mkdir('node_example', function(err, dirPath) {
-      var inputPath = path.join(dirPath, 'input.txt');
-      var outputPath = path.join(dirPath, 'output.txt');
+    //temp.mkdir('node_example', function(err, dirPath) {
+    //  var inputPath = path.join(__dirPath, 'input.txt');
+    //  var outputPath = path.join(__dirPath, 'output.txt');
+        
+        var inputPath = path.join(__dirname, 'input.txt');
+        var outputPath = path.join(__dirname, 'output.txt');
+        console.log("inputPath " + inputPath);
+ 	console.log("outputPath " + outputPath);
 
       fs.writeFile(inputPath, under, function(err) {
         if (err) throw err;
@@ -35,13 +40,15 @@ router.post('/', function(req, res) {
                 results: primes
               }));
 
-              exec('rm -r ' + dirPath, function(error) {
-                if (error) throw error;
-                console.log("Removed " + dirPath);
-              })
+              //exec('rm -m ' + dirPath, function(error) {             
+              //exec('del ' + __dirname, function(error) {
+
+              //  if (error) throw error;
+              //  console.log("Removed " + dirPath);
+             // })
           });
         });
-      });
+      //});
     });
 });
 
