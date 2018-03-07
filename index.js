@@ -10,6 +10,13 @@ var formidable = require('formidable'),
     util = require('util'),
     fs   = require('fs-extra');
 
+var app = express();
+//app.use(express.logger());
+
+app.get('/', function(request, response) {
+  response.send('Hello World!');
+});
+
 var server = http.createServer(function(req, res) { // var server
     res.writeHead(200, {'Content-Type': 'text/html'
     });
@@ -69,32 +76,11 @@ var server = http.createServer(function(req, res) { // var server
   );
 //});
 
-
-
-var type = 'standalone_flex_fileH'//yg
-
-
-  //var server = http.createServer(function(req, res) {  
-  //res.writeHead(200, {'Content-Type': 'text/html'
-  //});
-  //res.write('<!doctype html>\n<html lang="en">\n' + 
-  //  '\n<meta charset="utf-8">\n<title>C++ and node.js</title>\n' + 
-  // '<style type="text/css">* {font-family:arial, sans-serif;}</style>\n' + 
-  //  '\n\n<h1>C++ WebApp using Node.js</h1>\n' + 
-  //  '<div id="content"><p>  </p><ul><li>"average" </li></ul></div>' + 
-  //  '\n\n');
- 
-  //res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
-  //res.write('<input type="file" name="filetoupload"><br>');
-  //res.write('<input type="submit">');
-  //res.write('</form>');+-
-
-        //console.log("to here 1 ");
+  var type = 'standalone_flex_fileH'//yg
 
   router.get('/', function(req, res) {  //yg
     res.render('primes', {target:type});  //yg
   });
-       console.log("to here 2 ");//yg
 
   //router.post('/', function(req, res) { //yg  do not need this line
        
