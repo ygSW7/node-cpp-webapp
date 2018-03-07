@@ -23,11 +23,13 @@
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "ffi": "*",
+    "formidable": "^1.1.1",
+    "fs-extra": "^5.0.0",
     "jade": "^1.11.0",
     "ref": "*",
     "ref-array": "*",
-    "temp": "*",
-    "rmdir": "*"
+    "rmdir": "*",
+    "temp": "*"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
