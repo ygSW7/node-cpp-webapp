@@ -125,7 +125,7 @@ var type = 'standalone_flex_fileH'//yg
      // });
     //});
   });
-});
+}).listen(5000) //;
 
 module.exports = router;
 
