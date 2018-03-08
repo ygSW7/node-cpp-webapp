@@ -1,7 +1,7 @@
 {
-  "name": "cpp-nodejs-nan",
+  "name": "cpp-nodejs",
   "version": "0.3.0",
-  "description": "c++ webapp using Node.js nan ",
+  "description": "c++ webapp using Node.js ",
   "engines": {
     "node": "8.9.1"
   },
